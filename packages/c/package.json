@@ -1,0 +1,37 @@
+{
+  "name": "@test/c",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "mawencan <1044926436@qq.com>",
+  "homepage": "https://github.com/hengshanMWC/pnpm-monorepo#readme",
+  "license": "MIT",
+  "main": "dist/c.cjs.min.js",
+  "module": "dist/c.esm.min.js",
+  "unpkg": "dist/c.min.js",
+  "types": "src",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hengshanMWC/pnpm-monorepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "node rollup.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/hengshanMWC/pnpm-monorepo/issues"
+  },
+  "dependencies": {
+    "@test/a": "workspace:^0.0.1",
+    "@test/b": "workspace:^0.0.1"
+  }
+}

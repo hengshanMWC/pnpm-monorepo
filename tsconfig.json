@@ -1,0 +1,24 @@
+{
+  "exclude": ["node_modules", "**/es", "**/lib", "**/test", "**/dist"],
+  "include": [
+    "packages/*/src",
+    "packages/*/__tests__"
+  ],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "dist",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": ["DOM", "ES2020"],
+    "downlevelIteration": true
+  }
+}
