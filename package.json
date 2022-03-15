@@ -1,6 +1,6 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "@vueuse/monorepo",
+  "version": "0.0.1",
   "workspaces": [
     "packages/*"
   ],
