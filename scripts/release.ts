@@ -1,5 +1,5 @@
-const { execSync } = require('child_process')
-const { readJSONSync } = require('fs-extra')
+import { execSync } from 'child_process'
+import { readJSONSync } from 'fs-extra'
 
 const { version: oldVersion } = readJSONSync('package.json')
 
