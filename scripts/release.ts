@@ -1,6 +1,8 @@
 import { execSync } from 'child_process'
 import { readJSONSync } from 'fs-extra'
 
+execSync('npm run pre', { stdio: 'inherit' })
+
 const { version: oldVersion } = readJSONSync('package.json')
 
 execSync('npx bumpp', { stdio: 'inherit' })
@@ -13,7 +15,6 @@ if (oldVersion === version) {
 }
 
 execSync('npm run build:types', { stdio: 'inherit' })
-execSync('npm run pre', { stdio: 'inherit' })
 execSync('git add .', { stdio: 'inherit' })
 
 execSync(`git commit -m "chore: release v${version}"`, { stdio: 'inherit' })
