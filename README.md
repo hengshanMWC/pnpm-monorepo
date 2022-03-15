@@ -1,2 +1,3 @@
-# pnpm-monorepo
+# release-monorepo
+
 pnpm monorepo
