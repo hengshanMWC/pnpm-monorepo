@@ -14,7 +14,8 @@
     "build:b": "cd packages/b && yarn build",
     "build:c": "cd packages/c && yarn build",
     "lint": "eslint --ext=js,ts,json .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "node scripts/release && git push --follow-tags"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -32,8 +33,11 @@
     "@types/jest": "^27.4.0",
     "@typescript-eslint/parser": "^5.12.0",
     "babel-jest": "^27.5.1",
+    "bumpp": "^7.1.1",
     "camelcase": "^6.3.0",
+    "child_process": "^1.0.2",
     "eslint": "^8.9.0",
+    "fs-extra": "^10.0.1",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lerna": "^4.0.0",
