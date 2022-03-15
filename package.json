@@ -1,6 +1,6 @@
 {
   "name": "@test/monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -11,6 +11,7 @@
     "test:cov": "jest --coverage",
     "test": "jest",
     "build": "npm-run-all build:a build:b build:c",
+    "build:types": "tsc --emitDeclarationOnly",
     "build:a": "cd packages/a && yarn build",
     "build:b": "cd packages/b && yarn build",
     "build:c": "cd packages/c && yarn build",

@@ -12,7 +12,7 @@ if (oldVersion === version) {
   process.exit()
 }
 
-// execSync('npm run build:types', { stdio: 'inherit' })
+execSync('npm run build:types', { stdio: 'inherit' })
 execSync('npm run pre', { stdio: 'inherit' })
 execSync('git add .', { stdio: 'inherit' })
 
