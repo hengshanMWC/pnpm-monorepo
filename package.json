@@ -1,6 +1,6 @@
 {
   "name": "@test/monorepo",
-  "version": "0.0.2-beta.1",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -17,7 +17,8 @@
     "build:c": "cd packages/c && yarn build",
     "lint": "eslint --ext=js,ts,json .",
     "prepare": "husky install",
-    "release": "esno scripts/release.ts && git push --follow-tags"
+    "release": "esno scripts/release.ts && git push --follow-tags",
+    "update": "esno scripts/update.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
