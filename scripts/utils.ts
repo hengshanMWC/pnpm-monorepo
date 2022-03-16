@@ -5,13 +5,12 @@ export const DIR_SRC = resolve(__dirname, '../packages')
 // const DIR_TYPES = resolve(__dirname, '../types/packages')
 export async function getPackagesDir() {
   const result = await fs.readdir(DIR_SRC)
-  return result.map((dir) => join(DIR_SRC, dir))
+  return result.map((dir) => join(DIR_SRC, dir, 'package.json'))
 }
 export async function getPackagesJSON(dirs) {
   const result = []
   for (let i = 0; i < dirs.length; i++) {
-    const packagePath = join(dirs[i], 'package.json')
-    result.push(await fs.readJSON(packagePath))
+    result.push(await fs.readJSON(dirs[i]))
   }
   return result
 }
